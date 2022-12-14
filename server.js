@@ -1,9 +1,9 @@
 require('dotenv').config();
 //#region Variables
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const port = 3000;
-const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Supply = require('./models/supply-schema');
 //#endregion
@@ -16,8 +16,9 @@ app.use((req, res, next)=>{
 });
 app.use(express.urlencoded({extended:false}));
 //View engine set up
-app.set('view-engine', 'jsx');
+app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
+mongoose.set("strictQuery",true);
 //#endregion
 
 //#region setting up mongoose
@@ -26,6 +27,13 @@ mongoose.connection.once('open', ()=>{
     console.log('connected to mongo');
 });
 mongoose.set('strictQuery',true);
+//#endregion
+
+//#region root route
+app.get('/', (req, res)=>{
+    res.render('Root');
+   
+});
 //#endregion
 
 //#region Index route
@@ -38,3 +46,7 @@ app.get('/products', (req,res)=>{
 });
 //#endregion
 
+//app listening on port
+app.listen(port, ()=>{
+    console.log("listeting on port "+port);
+});
