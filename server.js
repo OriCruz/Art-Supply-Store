@@ -46,6 +46,28 @@ app.get('/products', (req,res)=>{
 });
 //#endregion
 
+//#region New route
+app.get('/products/new', (req, res)=>{
+    res.render('New');
+});
+//#endregion
+
+//#region Create 
+app.post('/products', (req, res)=>{
+    Supply.create(req.body, (error, addedItem)=>{
+        res.redirect('/products');
+    });
+});
+//#endregion
+
+//#region Show route
+app.get('/fruits/:id', (req,res)=>{
+    Supply.findById(req.params.id, (err, foundItem)=>{
+        res.render('Show',{ items:foundItem});
+    });
+});
+//#endregion
+
 //app listening on port
 app.listen(port, ()=>{
     console.log("listeting on port "+port);

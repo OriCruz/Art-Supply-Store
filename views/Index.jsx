@@ -13,8 +13,8 @@ class Index extends React.Component{
                     {items.map((item)=>{
                         return(
                         <li>
-                            <a href={`/products/${product.id}`}>{product.name}</a> 
-                            {' '} is {product.description} <br />
+                            <a href={`/products/${item.id}`}>{item.name}</a> 
+                             <br />
                         </li>
                         );
                     })}
