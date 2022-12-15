@@ -61,9 +61,11 @@ app.post('/products', (req, res)=>{
 //#endregion
 
 //#region Show route
-app.get('/fruits/:id', (req,res)=>{
+app.get('/products/:id', (req,res)=>{
     Supply.findById(req.params.id, (err, foundItem)=>{
-        res.render('Show',{ items:foundItem});
+        // console.log(foundFruit)
+        res.render('Show',{ items:foundItem}
+        );
     });
 });
 //#endregion
