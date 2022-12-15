@@ -52,6 +52,14 @@ app.get('/products/new', (req, res)=>{
 });
 //#endregion
 
+//#region Update
+app.put('/products/:id', (req,res)=>{
+    Supply.findByIdAndUpdate(req.params.id, req.body, (err,updatedItem)=>{
+        res.redirect(`/products/${req.params.id}`);
+    });
+});
+//#endregion
+
 //#region Create 
 app.post('/products', (req, res)=>{
     Supply.create(req.body, (error, addedItem)=>{
@@ -60,10 +68,22 @@ app.post('/products', (req, res)=>{
 });
 //#endregion
 
+//#region Edit route
+ app.get('/products/:id/edit', (req,res)=>{
+    Supply.findById(req.params.id, (err, foundItem)=>{
+        if(!err){
+            res.render('Edit', {item: foundItem});
+        }
+        else{
+            res.send({msg:err.message});
+        }
+    });
+ });
+//#endregion
+
 //#region Show route
 app.get('/products/:id', (req,res)=>{
     Supply.findById(req.params.id, (err, foundItem)=>{
-        // console.log(foundFruit)
         res.render('Show',{ items:foundItem}
         );
     });
