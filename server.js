@@ -52,6 +52,14 @@ app.get('/products/new', (req, res)=>{
 });
 //#endregion
 
+//#region Delete
+app.delete('/products/:id', (req,res) =>{
+    Supply.findByIdAndDelete(req.params.id, (err, data)=>{
+        res.redirect('/products');
+    });
+});
+//#endregion
+
 //#region Update
 app.put('/products/:id', (req,res)=>{
     Supply.findByIdAndUpdate(req.params.id, req.body, (err,updatedItem)=>{

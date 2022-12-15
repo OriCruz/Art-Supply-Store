@@ -15,8 +15,6 @@ class Index extends React.Component{
                         <li>
                             <a href={`/products/${item.id}`}>{item.name}</a> 
                              <br />
-                             
-                             <a href={`/products/${item._id}/Edit`}><input type="button" value="Edit"/></a>
                         </li>
                         );
                     })}
