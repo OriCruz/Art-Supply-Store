@@ -10,6 +10,7 @@ const Supply = require('./models/supply-schema');
 
 //#region Setting up middleware
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + '/public'))
 app.use((req, res, next)=>{
     console.log('I run for all routes');
     next();

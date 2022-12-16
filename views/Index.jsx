@@ -6,6 +6,7 @@ class Index extends React.Component{
         const {items}=this.props;
         return(
             <DefaultLayout title={"Supply Index Page"}>
+                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
                 <nav>
                     <a href="/products/new"> Add a new Item</a> | 
                     <a href="/"> Home</a>
