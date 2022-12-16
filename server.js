@@ -55,17 +55,29 @@ app.get('/products/new', (req, res)=>{
 //#region Delete
 app.delete('/products/:id', (req,res) =>{
     Supply.findByIdAndDelete(req.params.id, (err, data)=>{
-        res.redirect('/products');
+        res.redirect('/products/');
     });
 });
 //#endregion
 
 //#region Update
 app.put('/products/:id', (req,res)=>{
-    Supply.findByIdAndUpdate(req.params.id, req.body, (err,updatedItem)=>{
+    console.log(req.body);
+    if(req.body.quantity==='BUY'){
+        console.log('hello');
+       Supply.findByIdAndUpdate(req.params.id, {$inc:{'quantity':-1}}, (err, updatedItem)=>{
+        res.redirect(`/products/${req.params.id}`)
+       })
+    }
+    else{ 
+        Supply.findByIdAndUpdate(req.params.id, req.body, (err,updatedItem)=>{
         res.redirect(`/products/${req.params.id}`);
-    });
+        });
+    }
+    
 });
+
+
 //#endregion
 
 //#region Create 
@@ -87,6 +99,8 @@ app.post('/products', (req, res)=>{
         }
     });
  });
+
+
 //#endregion
 
 //#region Show route

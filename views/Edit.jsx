@@ -11,6 +11,9 @@ class Edit extends React.Component{
                     Price: <input type="text" name='price' defaultValue={this.props.item.price}/>
                     <br />
                     <br />
+                    Description: <input type="text" name='descripton' defaultValue={this.props.item.description}/> <br /> <br />
+                    Quantity: <input type="number" name='quantity' defaultValue={this.props.item.quantity} min='0' max='100'/> <br /> <br />
+                    {/* min and max in quantity so that the number input stays within a range*/}
                     <input type="submit" value='Submit Changes'/>
                </form>
             </DefaultLayout>

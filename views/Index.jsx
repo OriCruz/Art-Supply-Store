@@ -7,7 +7,8 @@ class Index extends React.Component{
         return(
             <DefaultLayout title={"Supply Index Page"}>
                 <nav>
-                    <a href="/products/new"> Add a new Item</a>
+                    <a href="/products/new"> Add a new Item</a> | 
+                    <a href="/"> Home</a>
                 </nav>
                 <ul>
                     {items.map((item)=>{

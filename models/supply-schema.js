@@ -3,7 +3,7 @@ const itemsSchema = new mongoose.Schema({
     name:{type:String, required: true},
     img:{type:String, required:true},
     description:{type:String, required:true},
-    quantity:{type:String, required:true},
+    quantity:{type:Number, required:true},
     price:{type:String, required:true}
 });
 
