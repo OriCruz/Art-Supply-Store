@@ -1,18 +1,20 @@
 const React = require('react');
+const DefaultLayout = require('./Default');
 
 class Rootpage extends React.Component{
     render(){
         return(
-        <html>
+        <DefaultLayout title={'Welcome to the Route'}>
             <head>
-                <title>Art Supply Store</title>
+                
             </head>
             <body>
-                <h1>Welcome to the Art Supply Store!</h1>
-                Here you will find all you need for your next artistic poroject! <br />
-                Please click <a href="/products">here</a>  to see our select items and more. 
+                <div>
+                    The Route is your friendly neighborhood art store<br />
+                </div>
+                
             </body>
-        </html>
+        </DefaultLayout>
         )
     }
 }

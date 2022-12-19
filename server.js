@@ -10,7 +10,7 @@ const Supply = require('./models/supply-schema');
 
 //#region Setting up middleware
 app.use(methodOverride('_method'));
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public'));
 app.use((req, res, next)=>{
     console.log('I run for all routes');
     next();
@@ -65,7 +65,6 @@ app.delete('/products/:id', (req,res) =>{
 app.put('/products/:id', (req,res)=>{
     console.log(req.body);
     if(req.body.quantity==='BUY'){
-        console.log('hello');
        Supply.findByIdAndUpdate(req.params.id, {$inc:{'quantity':-1}}, (err, updatedItem)=>{
         res.redirect(`/products/${req.params.id}`)
        })
