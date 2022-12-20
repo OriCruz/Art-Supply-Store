@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+    color: white;
+}
+ul{
+    display: inline-block;
+    width: auto;
+  
+}
+.itemList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(232,231,224);
+    margin: 0 auto 2em 18em;
+    border-width: 4px;
+    border-style: dotted;
+    border-color: rgb(38,47,80);
+}
+.itemName{
+    background-color: rgb(149,139,131);
+    font-style: italic;
+    margin:1em 1em 1em 1em;
+    padding: 0 1em 0 1em;
+    word-wrap: break-word;
+}
+.itemImg{
+    margin:1em 1em 1em 1em;
+    padding: 0 1em 0 1em;
+}

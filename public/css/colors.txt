@@ -9,3 +9,12 @@ rgb(116,152,142)
 
 hover nav
 color: rgb(147,131,96)
+
+item list bg color
+rgb(232,231,224)
+
+itemName cbg color
+rgb(149,139,131)
+
+border color 
+rgb(38,47,80)

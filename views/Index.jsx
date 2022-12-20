@@ -6,14 +6,20 @@ class Index extends React.Component{
         const {items}=this.props;
         return(
             <DefaultLayout title={"Supply Index Page"}>
-                <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+                <link rel="stylesheet" type="text/css" href="../css/index.css"/>
                 <ul>
                     {items.map((item)=>{
                         return(
-                        <li>
-                            <a href={`/products/${item.id}`}>{item.name}</a> 
+                        <div className='itemList'>
+                            <div className='itemName'>
+                            <h2>{item.name}</h2> </div>
+                            {/* image with a link to the show page (how cool is this!!) */}
+                            <div className='itemImg'>
+                            <a href={`/products/${item.id}`}><img src={item.img} width='220px' height='220px' alt={item.name}/></a>
+                            </div>
                              <br />
-                        </li>
+                             
+                        </div>
                         );
                     })}
                 </ul>  

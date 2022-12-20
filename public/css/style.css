@@ -60,7 +60,7 @@ body{
     color: black;
 }
 /* makes the website responsive when the screen is 500px */
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
     .topNav a {
         float: none; 
         display:block;
