@@ -19,8 +19,11 @@ class DefaultLayout extends React.Component{
                     <li><a className='active' href="/products/new"> Add a new Item</a> </li>
                     </ul> 
                 </div>
+                <div className='header'>
                     <h1>{this.props.title}</h1>
+                </div>
                     {this.props.children}
+                
                 </body>
             </html>
         );

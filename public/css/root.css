@@ -1,0 +1,20 @@
+h1{
+    color: white;
+    display: block;
+    text-align: center;
+}
+div{
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+}
+.homeLogo{
+    display: block;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+}

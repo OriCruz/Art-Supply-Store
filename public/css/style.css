@@ -34,7 +34,6 @@ body{
 .topNav ul li{
     padding: 0px;
     margin: 0px;
-    float: inline-end;
     display: inline-block;
 }
 .logo{

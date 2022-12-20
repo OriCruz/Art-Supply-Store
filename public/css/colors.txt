@@ -1,0 +1,11 @@
+/* background */
+rgb(116,152,142)
+
+/* nav bar */
+    color: rgb(37,57,75)
+
+/* text color */
+    color: white
+
+hover nav
+color: rgb(147,131,96)
