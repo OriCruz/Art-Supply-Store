@@ -5,7 +5,7 @@ class Index extends React.Component{
     render(){
         const {items}=this.props;
         return(
-            <DefaultLayout title={"Supply Index Page"}>
+            <DefaultLayout title={"Shop"}>
                 <link rel="stylesheet" type="text/css" href="../css/index.css"/>
                 <ul>
                     {items.map((item)=>{

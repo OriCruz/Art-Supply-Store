@@ -7,7 +7,7 @@ class Show extends React.Component{
         const showBuyBtn =()=>{
             if(items.quantity>0){
                return( <form action={`/products/${items.id}?_method=PUT`} method="POST">
-                     <input type="submit" name="quantity" value="BUY" /> <br />
+                     <input className='buy' type="submit" name="quantity" value="BUY" /> <br />
                   </form> 
                   );  
             }
@@ -18,22 +18,29 @@ class Show extends React.Component{
         } 
         return(
             <DefaultLayout title={items.name}>
-                <nav><a href="/products"><input type="button" value={`Return to products`}/></a>
+                <link rel="stylesheet" type="text/css" href="../css/show.css"/>
+                <nav className='return'><a href="/products"><input type="button" value={`Return to products`}/></a>
                 </nav>
-                {items.name} <br />
-                <img src={items.img} width='40%' alt={items.name}/> <br /> 
+                
+                <div className='container'>
+                    
+                <img src={items.img}  alt={items.name}/> <br /> 
+                <div className='info'>
                 Price : ${items.price} <br />
                 Description: {items.description} <br /> 
                 Quantity: {items.quantity} <br />
+                </div>
+                <div className='buttons'>
                 {showBuyBtn()}
                              
                 {/* Buttons */}
                 
-                <a href={`/products/${items._id}/Edit`}><input style={{color:'red'}} type="button" value="Edit"/></a>
+                <a href={`/products/${items._id}/Edit`}><input className='edit' type="button" value="EDIT"/></a>
                              
-                <form action={`/products/${items._id}?_method=DELETE`} method="POST">
-                <input type="submit" value="Delete"/>
-                </form>
+                <form action={`/products/${items._id}?_method=DELETE`} method="POST" >
+                <input className='delete' type="submit" value="DELETE"/>
+                </form></div>
+                </div>
             </DefaultLayout>
         );
     }
