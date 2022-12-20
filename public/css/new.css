@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+    color: white;
+}
+.form{
+    background-color: rgb(232,231,224);
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    border-style: dotted;
+    border-color: rgb(38,47,80);
+}
+form{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+.add{
+    background-color: rgb(37,57,75);
+    color: white;
+    margin-top: 10px;
+}
