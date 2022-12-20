@@ -35,7 +35,7 @@ class Show extends React.Component{
                              
                 {/* Buttons */}
                 
-                <a href={`/products/${items._id}/Edit`}><input className='edit' type="button" value="EDIT"/></a>
+                <a href={`/products/${items._id}/edit`}><input className='edit' type="button" value="EDIT"/></a>
                              
                 <form action={`/products/${items._id}?_method=DELETE`} method="POST" >
                 <input className='delete' type="submit" value="DELETE"/>
