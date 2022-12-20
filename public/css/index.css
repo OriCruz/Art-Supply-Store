@@ -2,10 +2,12 @@ h1{
     text-align: center;
     color: white;
 }
-ul{
-    display: inline-block;
+
+.list{
+    display: flex;
+    flex-direction: column;
     width: auto;
-  
+    margin: auto;
 }
 .itemList{
     display: flex;

@@ -7,7 +7,7 @@ class Index extends React.Component{
         return(
             <DefaultLayout title={"Shop"}>
                 <link rel="stylesheet" type="text/css" href="../css/index.css"/>
-                <ul>
+                <ul className='list'>
                     {items.map((item)=>{
                         return(
                         <div className='itemList'>
