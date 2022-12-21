@@ -24,7 +24,7 @@ class Show extends React.Component{
                 
                 <div className='container'>
                     
-                <img src={items.img}  alt={items.name}/> <br /> 
+                <img src={items.img}  alt={items.name} width='300px' height='300px'/> <br /> 
                 <div className='info'>
                 Price : ${items.price} <br />
                 Description: {items.description} <br /> 
