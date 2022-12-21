@@ -13,7 +13,8 @@ This website simulates a store's website a little out of the ordinary. Here user
 - Users have the option to buy, edit, or delete any product. Keep in mind once a product have been deleted they will have to create it from scratch if they want it back.
 
 ## How the project looks
-![demonstration](./assets/mod2-project%20-%20Made%20with%20Clipchamp%20-%20Copy.mp4)
+![demonstration of web](./assets/pagedisplay.mp4)
+![code demo](./assets/pagedisplay.mp4)
 ## Installation instructions
 1. Clone or fork the repository
 Using your terminal copy the following code: `git close https://github.com/OriCruz/Art-Supply-Store.git`
